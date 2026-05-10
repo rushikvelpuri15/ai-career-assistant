@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+🎤 AI CAREER ASSISTANT – INTERVIEW READY SCRIPT
+🟢 1. Project Introduction (Start like this)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+“I have developed an AI-powered Career Assistant web application that helps users analyze their resumes against job descriptions, generate ATS scores, suggest improvements, and prepare for interviews. It also includes a chatbot for career guidance and a PDF report generator.”
 
-Currently, two official plugins are available:
+🟢 2. Problem Statement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+“Many students struggle to understand how well their resume matches a job description. They also don’t know what skills are missing or how to improve their resume for ATS systems used by companies.”
 
-## React Compiler
+🟢 3. My Solution
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+“To solve this, I built a full-stack system where users can upload a resume and job description. The system analyzes both and provides:
 
-## Expanding the ESLint configuration
+ATS score
+Matched and missing skills
+Resume improvement suggestions
+Interview questions
+AI chat support
+PDF report download”
+🟢 4. Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+“I used:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+React (TypeScript) for frontend
+FastAPI (Python) for backend
+pdfplumber for extracting resume text
+reportlab for PDF generation
+Axios for API communication”
+🟢 5. Core Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+“Main features include:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Resume parsing from PDF
+Job description analysis using keyword matching
+ATS scoring algorithm
+Chat-based AI assistant (rule-based logic)
+PDF report generation for results
+Full-stack integration”
+🟢 6. How ATS Score Works
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+“I used a simple NLP-based approach where:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Resume and job description text are tokenized
+Common words are matched
+Score is calculated based on overlap percentage between skills”
+🟢 7. Chat Feature
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+“The chatbot provides career guidance such as resume improvement tips, job matching advice, and interview preparation questions using rule-based logic.”
+
+🟢 8. Challenges Faced
+
+“I faced challenges in:
+
+Connecting frontend and backend (CORS issues)
+File upload handling
+PDF text extraction accuracy
+Git deployment issues”
+🟢 9. Future Improvements
+
+“I plan to improve it by:
+
+Integrating OpenAI for smarter AI responses
+Adding real-time ATS scoring visualization
+Building a resume builder module
+Adding user login and history tracking”
+🟢 10. Closing Statement
+
+“This project helped me understand full-stack development, API integration, and real-world problem solving in career guidance systems.”
