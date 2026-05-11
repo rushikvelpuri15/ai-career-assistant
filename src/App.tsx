@@ -28,9 +28,9 @@ function App() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/upload-resume",
-        formData
-      );
+  `${import.meta.env.VITE_API_URL}/upload-resume`,
+  formData
+);
 
       setResult(res.data.result);
       setScore(res.data.score);
@@ -51,9 +51,9 @@ function App() {
     formData.append("message", chatInput);
 
     const res = await axios.post(
-      "http://127.0.0.1:8000/chat",
-      formData
-    );
+  `${import.meta.env.VITE_API_URL}/chat`,
+  formData
+  );
 
     setChatResponse(res.data.response);
   };
@@ -67,10 +67,10 @@ function App() {
     formData.append("result", result);
 
     const res = await axios.post(
-      "http://127.0.0.1:8000/download-pdf",
-      formData,
-      { responseType: "blob" }
-    );
+  `${import.meta.env.VITE_API_URL}/download-pdf`,
+  formData,
+  { responseType: "blob" }
+  );
 
     const url = window.URL.createObjectURL(new Blob([res.data]));
     const link = document.createElement("a");
