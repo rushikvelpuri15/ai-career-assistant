@@ -13,9 +13,7 @@ function App() {
 
   const [loading, setLoading] = useState(false);
 
-  // =========================
   // RESUME UPLOAD
-  // =========================
   const uploadResume = async () => {
 
     if (!file) return;
